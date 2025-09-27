@@ -95,11 +95,11 @@ function chooseHole(holes) {
 function gameOver() {
   // TODO: Write your code here
   if (time > 0) {
-    timeoutID = showUp()
+    let timeoutID = showUp()
     return timeoutID
   }
   else {
-    gameStopped = stopGame()
+    let gameStopped = stopGame()
     return gameStopped
   }
 }
@@ -186,9 +186,10 @@ function clearScore() {
 *
 */
 function updateTimer() {
-  // TODO: Write your code here.
-  // hint: this code is provided to you in the instructions.
-  
+  if (time > 0) {
+    time -= 1;
+    timerDisplay.textContent = time;
+  }
   return time;
 }
 
@@ -200,7 +201,7 @@ function updateTimer() {
 */
 function startTimer() {
   // TODO: Write your code here
-  // timer = setInterval(updateTimer, 1000);
+  timer = setInterval(updateTimer, 1000);
   return timer;
 }
 
@@ -291,7 +292,7 @@ window.startGame = startGame;
 window.gameOver = gameOver;
 window.showUp = showUp;
 window.holes = holes;
-window.moles = moles;
+window.aliens = aliens;
 window.showAndHide = showAndHide;
 window.points = points;
 window.updateScore = updateScore;
