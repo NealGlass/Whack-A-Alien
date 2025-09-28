@@ -273,7 +273,7 @@ function stopGame(){
 function startGame(){
   clearScore();
   stopGame();   
-  setDuration(10);
+  setDuration(20);
   setEventListeners();
   startTimer();
   showUp();
@@ -281,6 +281,30 @@ function startGame(){
 }
 
 startButton.addEventListener("click", startGame);
+
+
+//adding audio to the game.
+
+const audioHit = new Audio("https://raw.githubusercontent.com/NealGlass/Whack-A-Alien/main/assets/hit.mp3");
+const song = new Audio("https://raw.githubusercontent.com/NealGlass/Whack-A-Alien/main/assets/molesong.mp3");
+
+
+function playAudio(audioObject) {
+  audioObject.play();
+}
+
+function loopAudio(audioObject) {
+  audioObject.loop = true;
+  playAudio(audioObject);
+}
+
+function stopAudio(audioObject) {
+  audioObject.pause();
+}
+
+function play(){
+  playAudio(song);
+}
 
 
 // Please do not modify the code below.
@@ -302,3 +326,4 @@ window.time = time;
 window.setDuration = setDuration;
 window.toggleVisibility = toggleVisibility;
 window.setEventListeners = setEventListeners;
+
