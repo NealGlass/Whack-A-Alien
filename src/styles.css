@@ -4,7 +4,15 @@
   --alien-image: url('https://raw.githubusercontent.com/NealGlass/Whack-A-Alien/main/assets/Green%20Alien%202.png');
   --cursor: url('https://raw.githubusercontent.com/NealGlass/Whack-A-Alien/main/assets/Raygun.png');
 }
-
+#buttons {
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  position: relative; 
+  z-index: 9999;       
+}
 
 html {
   /*background: url('./assets/background.png') no-repeat center center fixed;*/
@@ -84,12 +92,4 @@ h2 {
   /*transform: scale(1.1);*/
 }
 
-#buttons {
-  display: flex;
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  position: relative; 
-  z-index: 9999;       
-}
+
