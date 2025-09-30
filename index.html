@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="./src/styles.css">
+    <script src="./src/index.js" defer></script>
   </head>
   <body>
 
@@ -10,6 +11,11 @@
       <div>
         <h2>Click start to play!</h2>
       </div>
+          <!-- Adding a start button-->
+     <div id="buttons">
+      <button id="start">Start</button>
+      <button onclick="play();">play song</button>
+    </div>
       <div>
         <h2>score: <span id="score">0</span></h2>
       </div>
@@ -51,13 +57,5 @@
       </div>
     </div>
 
-    <!-- Adding a start button-->
-
- <div id="buttons">
-  <button id="start">Start</button>
-  <button onclick="play();">play song</button>
-</div>
-
-    <script src="./src/index.js"></script>
-  </body>
+</body>
 </html>
