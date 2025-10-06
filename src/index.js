@@ -1,5 +1,5 @@
 const holes = document.querySelectorAll('.hole');
-const aliens = document.querySelectorAll('.alien');
+const moles = document.querySelectorAll('.mole');
 const startButton = document.querySelector('#start');
 // TODO: Add the missing query selectors:
 const score = document.querySelector('#score'); // Use querySelector() to get the score element
@@ -225,10 +225,10 @@ function whack(event) {
 * for an example on how to set event listeners using a for loop.
 */
 function setEventListeners(){
-  aliens.forEach(
-    alien => alien.addEventListener('click', whack)
+  moles.forEach(
+    mole => mole.addEventListener('click', whack)
   );
-  return aliens;
+  return moles;
 }
 
 /**
@@ -316,7 +316,7 @@ window.startGame = startGame;
 window.gameOver = gameOver;
 window.showUp = showUp;
 window.holes = holes;
-window.aliens = aliens;
+window.moles = moles;
 window.showAndHide = showAndHide;
 window.points = points;
 window.updateScore = updateScore;
